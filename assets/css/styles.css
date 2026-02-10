@@ -65,7 +65,7 @@ button{ font:inherit; }
 }
 
 .header-inner{
-  height: 90px;
+  height: 125px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -365,8 +365,8 @@ button{ font:inherit; }
 @media (max-width: 900px){
   .nav-links{ display:none; }
   .menu-btn{ display:inline-flex; }
-  .header-inner{ height: 78px; }
-  .brand-logo{ height: 56px; max-height: 56px; }
+  .header-inner{ height: 90px; }
+  .brand-logo{ height: 90px; max-height: 90px; }
   .hero{ min-height: calc(100vh - 78px); }
   .hero-content{ padding: 70px 0 46px; }
   .grid-2, .grid-3{ grid-template-columns: 1fr; }
