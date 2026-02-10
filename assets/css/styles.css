@@ -350,3 +350,37 @@ textarea{ min-height: 120px; resize: vertical; }
   html{ scroll-behavior:auto; }
   *{ transition:none !important; }
 }
+/* ================= LOGO HEADER UPGRADE ================= */
+
+.site-header {
+  height: 80px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+}
+
+.main-logo {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+  transition: transform .25s ease;
+}
+
+/* Nice subtle hover */
+.main-logo:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .site-header {
+    height: 70px;
+  }
+
+  .main-logo {
+    height: 46px;
+  }
+}
+
