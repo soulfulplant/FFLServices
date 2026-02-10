@@ -1,212 +1,221 @@
 /* =========================================================
-   Fox Film Location Services — Cinematic Theme (Starter)
-   Save as: /assets/css/styles.css
+   Fox Film Location Services — Clean Cinematic Styles
    ========================================================= */
 
-/* ---------- Design tokens ---------- */
 :root{
-  /* Brand */
-  --accent: #F26A21;       /* fox orange */
-  --accent-2: #FFB24A;     /* warm highlight */
-  --ink: #0B0D10;          /* near-black */
-  --ink-2: #12151B;        /* section bg */
-  --surface: rgba(255,255,255,.06);
-  --surface-2: rgba(255,255,255,.10);
-  --stroke: rgba(255,255,255,.12);
-
-  /* Text */
+  --bg: #0B0D10;
+  --bg2: #07080A;
   --text: rgba(255,255,255,.92);
   --muted: rgba(255,255,255,.70);
-  --faint: rgba(255,255,255,.52);
+  --stroke: rgba(255,255,255,.12);
 
-  /* Effects */
-  --shadow: 0 14px 40px rgba(0,0,0,.55);
-  --shadow-soft: 0 10px 24px rgba(0,0,0,.40);
+  --accent: #F26A21;
+  --accent2: #FFB24A;
+
+  --shadow: 0 18px 50px rgba(0,0,0,.55);
+  --shadowSoft: 0 10px 24px rgba(0,0,0,.35);
+
   --radius: 18px;
-  --radius-sm: 12px;
-
-  /* Layout */
-  --max: 1140px;
+  --max: 1160px;
   --gutter: 20px;
 
-  /* Type */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial;
+  --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
 }
 
-/* ---------- Base reset ---------- */
+/* Base */
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
   margin:0;
-  font-family: var(--font-sans);
+  font-family: var(--sans);
   color: var(--text);
-  background: radial-gradient(1200px 700px at 20% -10%, rgba(242,106,33,.25), transparent 55%),
-              radial-gradient(900px 600px at 90% 20%, rgba(255,178,74,.12), transparent 60%),
-              linear-gradient(180deg, #07080A 0%, #0B0D10 35%, #07080A 100%);
-  line-height: 1.55;
-}
-
-img, video{ max-width:100%; display:block; }
-a{ color:inherit; text-decoration:none; }
-button, input, textarea{ font:inherit; }
-
-/* Optional: smoother typography on dark backgrounds */
-body, button, input, textarea{
+  background:
+    radial-gradient(1200px 700px at 20% -10%, rgba(242,106,33,.22), transparent 55%),
+    radial-gradient(900px 600px at 90% 20%, rgba(255,178,74,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 40%, var(--bg2) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------- Utility ---------- */
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
 .container{
-  width: min(var(--max), calc(100% - (var(--gutter) * 2)));
-  margin-inline:auto;
-}
-.stack > * + *{ margin-top: 16px; }
-.muted{ color: var(--muted); }
-.faint{ color: var(--faint); }
-
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding: 8px 12px;
-  border: 1px solid var(--stroke);
-  border-radius: 999px;
-  background: rgba(0,0,0,.20);
-  box-shadow: var(--shadow-soft);
+  width:min(var(--max), calc(100% - (var(--gutter) * 2)));
+  margin:0 auto;
 }
 
-/* ---------- Top Nav ---------- */
+/* ================= Header ================= */
 .site-header{
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 100;
+  background: rgba(0,0,0,.55);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 100%);
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
-.nav{
+
+.header-inner{
+  height: 88px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 14px 0;
+  gap: 18px;
 }
+
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
 }
-.brand img{ width: 44px; height:44px; }
-.brand .name{
-  font-weight: 750;
-  letter-spacing: .6px;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-.brand .sub{
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: -2px;
+
+.brand-logo{
+  height: 60px;          /* BIGGER */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.45));
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap: 18px;
+  gap: 14px;
 }
+
 .nav-links a{
-  padding: 10px 10px;
-  color: var(--muted);
+  padding: 10px 12px;
   border-radius: 999px;
+  color: rgba(255,255,255,.78);
   border: 1px solid transparent;
-  transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
 }
+
 .nav-links a:hover{
-  color: var(--text);
   background: rgba(255,255,255,.06);
   border-color: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.92);
   transform: translateY(-1px);
 }
 
-/* Simple mobile menu hook (if you add JS later) */
+.nav-links a.is-active{
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+}
+
 .menu-btn{
   display:none;
-  padding:10px 12px;
-  border-radius:999px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.10);
   color: var(--text);
 }
 
-/* ---------- Hero ---------- */
+/* Mobile menu */
+.mobile-menu{
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: rgba(0,0,0,.55);
+}
+.mobile-menu a{
+  display:block;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.80);
+}
+.mobile-menu a:hover{ background: rgba(255,255,255,.06); }
+
+/* ================= Hero ================= */
 .hero{
   position: relative;
-  min-height: 88vh;
-  display:grid;
-  align-items:end;
-  padding: 88px 0 52px;
+  min-height: calc(100vh - 88px);
+  display:flex;
+  align-items:flex-end;
   overflow:hidden;
 }
-.hero-media{
+
+.hero-bg{
   position:absolute;
   inset:0;
   z-index:-2;
-}
-.hero-media video,
-.hero-media img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
+
+  /* ✅ Your hero image path */
+  background-image: url("../img/hero/MoutainViews.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Slight cinematic treatment */
   filter: saturate(1.05) contrast(1.05);
+  transform: scale(1.02);
 }
+
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
   z-index:-1;
   background:
-    linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,.88) 100%),
-    radial-gradient(900px 600px at 30% 20%, rgba(242,106,33,.25), transparent 60%);
-}
-.hero h1{
-  font-family: var(--font-serif);
-  font-weight: 650;
-  letter-spacing: .2px;
-  font-size: clamp(38px, 5vw, 62px);
-  line-height: 1.05;
-  margin: 0;
-}
-.hero p{
-  max-width: 64ch;
-  color: var(--muted);
-  font-size: 18px;
-  margin: 14px 0 0;
-}
-.hero-cta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top: 22px;
+    radial-gradient(900px 600px at 30% 20%, rgba(242,106,33,.18), transparent 65%),
+    linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.70) 55%, rgba(0,0,0,.88) 100%);
 }
 
-/* ---------- Buttons ---------- */
+.hero-content{
+  padding: 90px 0 56px;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.25);
+  color: rgba(255,255,255,.85);
+  box-shadow: var(--shadowSoft);
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+.hero h1{
+  margin: 18px 0 0;
+  font-family: var(--serif);
+  font-weight: 650;
+  font-size: clamp(38px, 5.2vw, 72px);
+  line-height: 1.03;
+  max-width: 18ch;
+}
+
+.hero p{
+  margin: 14px 0 0;
+  color: rgba(255,255,255,.74);
+  font-size: 18px;
+  max-width: 65ch;
+}
+
+.hero-cta{
+  margin-top: 22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 12px;
+}
+
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
   padding: 12px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.16);
   background: rgba(0,0,0,.25);
   color: var(--text);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadowSoft);
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
-.btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22); }
-.btn:active{ transform: translateY(0px); }
+.btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.24); }
+.btn:active{ transform: translateY(0); }
 
 .btn-primary{
   background: linear-gradient(180deg, var(--accent) 0%, #D85616 100%);
@@ -218,81 +227,71 @@ body, button, input, textarea{
 .btn-ghost{
   background: rgba(255,255,255,.06);
 }
+.btn-outline{
+  background: rgba(0,0,0,.18);
+}
 
-/* ---------- Sections ---------- */
-.section{
-  padding: 72px 0;
-}
+/* ================= Sections ================= */
+.section{ padding: 72px 0; }
+
 .section-title{
-  font-family: var(--font-serif);
-  font-size: clamp(26px, 3vw, 40px);
-  margin: 0 0 14px;
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 42px);
 }
-.section-lead{
+
+.lead{
+  margin: 0;
   color: var(--muted);
   max-width: 72ch;
+  font-size: 17px;
 }
 
-/* ---------- Cards / grids ---------- */
+.muted{ color: var(--muted); }
+
 .grid{
   display:grid;
   gap: 18px;
 }
-.grid-2{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-.grid-3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+.grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .card{
   border-radius: var(--radius);
   border: 1px solid var(--stroke);
   background: linear-gradient(180deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,.04) 100%);
-  box-shadow: var(--shadow-soft);
-  overflow:hidden;
+  box-shadow: var(--shadowSoft);
+  padding: 18px;
 }
-.card .pad{ padding: 18px; }
+
 .card h3{ margin: 0 0 8px; }
-.card p{ margin: 0; color: var(--muted); }
+.card p{ margin: 0 0 10px; color: var(--muted); }
+.card p:last-child{ margin-bottom: 0; }
 
-/* ---------- Image/video gallery tiles ---------- */
-.tile{
-  position:relative;
-  border-radius: var(--radius);
-  overflow:hidden;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
-  box-shadow: var(--shadow-soft);
+/* Check list */
+.checks{
+  margin: 18px 0 0;
+  padding: 0;
+  list-style:none;
 }
-.tile img, .tile video{
-  width:100%;
-  height: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-  transform: scale(1.01);
-  transition: transform .35s ease;
+.checks li{
+  margin-top: 10px;
+  color: rgba(255,255,255,.80);
 }
-.tile:hover img, .tile:hover video{ transform: scale(1.05); }
-.tile::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.70) 100%);
-}
-.tile .caption{
-  position:absolute;
-  left:14px;
-  right:14px;
-  bottom:12px;
-  z-index:1;
-  color: rgba(255,255,255,.92);
-  font-weight: 600;
+.checks li::before{
+  content:"✓";
+  display:inline-block;
+  margin-right: 10px;
+  color: var(--accent2);
 }
 
-/* ---------- “Apple-like” scroll section starter (CSS-only) ---------- */
-/* Use this for a horizontal story you can swipe/scroll through */
+/* Lookbook scroller */
 .snap-row{
+  margin-top: 18px;
   display:flex;
   gap: 16px;
   overflow-x:auto;
-  padding: 8px 4px 18px;
+  padding: 6px 4px 18px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
@@ -301,142 +300,76 @@ body, button, input, textarea{
   background: rgba(255,255,255,.14);
   border-radius: 999px;
 }
-.snap{
+
+.tile{
+  position:relative;
   flex: 0 0 min(86vw, 520px);
   scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.04);
+  box-shadow: var(--shadowSoft);
+}
+.tile img{
+  width:100%;
+  height: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform .35s ease;
+}
+.tile:hover img{ transform: scale(1.05); }
+.tile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,.70) 100%);
+}
+.caption{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:12px;
+  z-index:1;
+  font-weight: 600;
+  color: rgba(255,255,255,.92);
+  text-shadow: 0 10px 24px rgba(0,0,0,.55);
 }
 
-/* ---------- Contact form ---------- */
-.form{
+/* CTA */
+.cta{
   display:grid;
-  gap:12px;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 18px;
+  align-items: start;
 }
-.field{
-  display:grid;
-  gap:8px;
-}
-label{ color: var(--muted); font-size: 13px; }
-input, textarea{
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.25);
-  color: var(--text);
-  padding: 12px 12px;
-  outline:none;
-}
-input:focus, textarea:focus{
-  border-color: rgba(242,106,33,.6);
-  box-shadow: 0 0 0 4px rgba(242,106,33,.15);
-}
-textarea{ min-height: 120px; resize: vertical; }
+.big{ font-weight: 650; }
 
-/* ---------- Footer ---------- */
+/* Footer */
 .footer{
-  padding: 34px 0;
   border-top: 1px solid rgba(255,255,255,.10);
-  color: var(--muted);
+  padding: 28px 0;
+  color: rgba(255,255,255,.70);
 }
 
-/* ---------- Responsive ---------- */
+/* Responsive */
 @media (max-width: 900px){
-  .grid-2, .grid-3{ grid-template-columns: 1fr; }
   .nav-links{ display:none; }
   .menu-btn{ display:inline-flex; }
-  .hero{ padding-top: 76px; min-height: 84vh; }
+  .header-inner{ height: 76px; }
+  .brand-logo{ height: 52px; }
+
+  .hero{ min-height: calc(100vh - 76px); }
+  .hero-content{ padding: 70px 0 46px; }
+  .hero h1{ max-width: 22ch; }
+
+  .grid-2, .grid-3{ grid-template-columns: 1fr; }
+  .cta{ grid-template-columns: 1fr; }
 }
 
-/* ---------- Reduced motion ---------- */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior:auto; }
+  html{ scroll-behavior: auto; }
   *{ transition:none !important; }
 }
-/* ================= LOGO HEADER UPGRADE ================= */
-
-.site-header {
-  height: 80px;
-}
-
-.brand {
-  display:flex;
-  align-items:center;
-}
-
-.main-logo {
-  height: 58px;
-  width: auto;
-  object-fit: contain;
-  transition: transform .25s ease;
-}
-
-/* Nice subtle hover */
-.main-logo:hover {
-  transform: scale(1.03);
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .site-header {
-    height: 70px;
-  }
-
-  .main-logo {
-    height: 46px;
-  }
-}
-/* ================= HEADER + LOGO (FORCE OVERRIDE) ================= */
-
-/* Make header taller so the tall logo can actually be seen */
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  height: 110px;                 /* bigger */
-  display: flex;
-  align-items: center;
-  background: rgba(0,0,0,.55);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-/* Align nav nicely inside the taller header */
-.nav{
-  width: 100%;
-  padding: 18px 0;              /* gives breathing room */
-  align-items: center;
-}
-
-/* Give the logo area a “badge” so it pops on any background */
-.brand{
-  display: flex;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 16px;
-  background: rgba(0,0,0,.35);
-  border: 1px solid rgba(255,255,255,.14);
-}
-
-/* This is the key: override the earlier .brand img { width:44; height:44 } */
-.brand img.main-logo{
-  height: 86px !important;      /* BIG and clear */
-  width: auto !important;
-  max-height: 86px !important;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 22px rgba(0,0,0,.55));
-}
-
-/* Optional: tighten nav spacing and improve readability */
-.nav-links a{
-  font-size: 15px;
-  letter-spacing: .02em;
-}
-
-/* Mobile adjustments */
-@media (max-width: 900px){
-  .site-header{ height: 86px; }
-  .nav{ padding: 12px 0; }
-  .brand img.main-logo{
-    height: 62px !important;
-    max-height: 62px !important;
-  }
-}
-
