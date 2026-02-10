@@ -383,4 +383,60 @@ textarea{ min-height: 120px; resize: vertical; }
     height: 46px;
   }
 }
+/* ================= HEADER + LOGO (FORCE OVERRIDE) ================= */
+
+/* Make header taller so the tall logo can actually be seen */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 110px;                 /* bigger */
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Align nav nicely inside the taller header */
+.nav{
+  width: 100%;
+  padding: 18px 0;              /* gives breathing room */
+  align-items: center;
+}
+
+/* Give the logo area a “badge” so it pops on any background */
+.brand{
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+/* This is the key: override the earlier .brand img { width:44; height:44 } */
+.brand img.main-logo{
+  height: 86px !important;      /* BIG and clear */
+  width: auto !important;
+  max-height: 86px !important;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.55));
+}
+
+/* Optional: tighten nav spacing and improve readability */
+.nav-links a{
+  font-size: 15px;
+  letter-spacing: .02em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px){
+  .site-header{ height: 86px; }
+  .nav{ padding: 12px 0; }
+  .brand img.main-logo{
+    height: 62px !important;
+    max-height: 62px !important;
+  }
+}
 
