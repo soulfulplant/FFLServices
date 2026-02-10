@@ -1,223 +1,186 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fox Film Location Services</title>
+  <meta name="description" content="We help international film crews shoot in Italy — fast, smoothly, and cinematically. Location scouting, permits, fixing, production support." />
 
-<title>Fox Film Location Services</title>
-
-<link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-<div class="container nav">
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-<a class="brand" href="index.html" aria-label="Fox Film Location Services">
-  <img
-    src="assets/img/brand/FFLS_LogoClear.png"
-    alt="Fox Film Location Services"
-    class="main-logo"
-  />
-</a>
+      <a class="brand" href="index.html" aria-label="Fox Film Location Services Home">
+        <img
+          class="brand-logo"
+          src="assets/img/brand/FFLS_LogoClear.png"
+          alt="Fox Film Location Services"
+        />
+      </a>
 
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="#services">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-<nav class="nav-links">
-<a href="index.html">Home</a>
-<a href="locations.html">Locations</a>
-<a href="#services">Services</a>
-<a href="contact.html">Contact</a>
-</nav>
+      <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>
+        Menu
+      </button>
 
-<button class="menu-btn" data-menu-btn>Menu</button>
+    </div>
 
-</div>
-</header>
+    <div class="mobile-menu" data-mobile-menu style="display:none">
+      <a href="index.html">Home</a>
+      <a href="locations.html">Locations</a>
+      <a href="#services">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
 
-<!-- HERO -->
-<main>
+  <!-- ================= Hero ================= -->
+  <main>
 
-<section class="hero">
+    <section class="hero" aria-label="Hero">
+      <!-- Background image set via CSS for reliability -->
+      <div class="hero-bg" role="img" aria-label="Cinematic Italian landscape"></div>
 
-<div class="hero-media">
+      <div class="container hero-content">
+        <div class="pill">Access • Speed • Cinematic Locations</div>
 
-<!-- HERO IMAGE -->
-<div class="hero-media">
-  <img 
-    src="assets/img/hero/MoutainViews.png"
-    alt="Italian mountain cinematic location"
-  >
-</div>
+        <h1>
+          We give you Italy — the cinematic, medieval, unforgettable Italy —
+          with access when it matters.
+        </h1>
 
+        <p>
+          Scouting, doors opened, logistics aligned. Your production — ready to shoot.
+        </p>
 
-<div class="container">
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="contact.html">Book a Call</a>
+          <a class="btn btn-ghost" href="#lookbook">Download Lookbook</a>
+          <a class="btn btn-outline" href="mailto:info@foxfilmlocationservices.com">Email Us</a>
+        </div>
+      </div>
+    </section>
 
-<div class="badge">
-Access • Speed • Cinematic Locations
-</div>
+    <!-- ================= About ================= -->
+    <section class="section">
+      <div class="container grid grid-2">
+        <div>
+          <h2 class="section-title">
+            We help international film crews shoot in Italy — fast, smoothly, and cinematically.
+          </h2>
 
-<h1>
-We give you Italy — the cinematic, medieval, unforgettable Italy — with access when it matters.
-</h1>
+          <p class="lead">
+            From medieval towns and hilltop villages to hidden countryside estates — we give productions access, insight,
+            and the locations they can’t find alone.
+          </p>
 
-<p>
-Scouting, doors opened, logistics aligned. Your production — ready to shoot.
-</p>
+          <ul class="checks">
+            <li>Access to cinematic hidden locations</li>
+            <li>Permits & logistics handled locally</li>
+            <li>Production support & on-set readiness</li>
+          </ul>
+        </div>
 
-<div class="hero-cta">
-<a class="btn btn-primary" href="contact.html">Book a Call</a>
-<a class="btn btn-ghost" href="#lookbook">Download Lookbook</a>
-<a class="btn" href="mailto:info@foxfilmlocationservices.com">Email Us</a>
-</div>
+        <div class="card">
+          <h3>Umbria–Tuscany border specialist</h3>
+          <p>
+            Medieval towns including Montone, Città di Castello and Gubbio — plus villas, abbeys and countryside estates.
+          </p>
+          <p class="muted">
+            We open doors, coordinate logistics, and provide local knowledge productions can’t access alone.
+          </p>
+        </div>
+      </div>
+    </section>
 
-</div>
-</section>
+    <!-- ================= Lookbook Scroll ================= -->
+    <section class="section" id="lookbook">
+      <div class="container">
+        <h2 class="section-title">Location Lookbook</h2>
+        <p class="lead">A preview of the cinematic Italy we can unlock for your production.</p>
 
-<!-- ABOUT -->
-<section class="section">
-<div class="container grid grid-2">
+        <div class="snap-row" aria-label="Lookbook scroller">
+          <a class="tile" href="locations.html">
+            <img src="assets/img/locations/lookbook1.jpg" alt="Medieval hilltop towns" loading="lazy">
+            <div class="caption">Medieval hilltop towns</div>
+          </a>
 
-<div>
+          <a class="tile" href="locations.html">
+            <img src="assets/img/locations/lookbook2.jpg" alt="Stone streets & architecture" loading="lazy">
+            <div class="caption">Stone streets & architecture</div>
+          </a>
 
-<h2 class="section-title">
-We help international film crews shoot in Italy — fast, smoothly, and cinematically.
-</h2>
+          <a class="tile" href="locations.html">
+            <img src="assets/img/locations/lookbook3.jpg" alt="Countryside villas & estates" loading="lazy">
+            <div class="caption">Countryside villas & estates</div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<p class="section-lead">
-From medieval towns and hilltop villages to hidden countryside estates — we give productions access, insight, and the locations they can’t find alone.
-</p>
+    <!-- ================= Services ================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Scouting. Fixing. Making it happen.</h2>
 
-<div class="stack" style="margin-top:20px">
-<div class="pill">Access to cinematic hidden locations</div>
-<div class="pill">Permits & logistics handled locally</div>
-<div class="pill">On-set support & production readiness</div>
-</div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Location scouting</h3>
+            <p>Script-driven scouting across Umbria and Tuscany with camera-ready options.</p>
+          </div>
 
-</div>
+          <div class="card">
+            <h3>Permits & logistics</h3>
+            <p>Municipal coordination, permits, closures, access planning and unit base flow.</p>
+          </div>
 
-<div class="card">
-<div class="pad">
+          <div class="card">
+            <h3>Production support</h3>
+            <p>Fixing support, local coordination, vendors, and on-set readiness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h3>Umbria – Tuscany Border Specialist</h3>
+    <!-- ================= CTA ================= -->
+    <section class="section">
+      <div class="container cta">
+        <div>
+          <h2 class="section-title">Plan your Italian production with confidence</h2>
+          <p class="lead">Tell us your dates, crew size, and the locations you need — we’ll move fast.</p>
+          <a class="btn btn-primary" href="contact.html">Contact Us</a>
+        </div>
 
-<p class="muted">
-Medieval towns including Montone, Città di Castello and Gubbio — plus villas, abbeys and countryside estates.
-</p>
+        <div class="card">
+          <div class="muted">Based in</div>
+          <div class="big">Umbria–Tuscany Border</div>
+          <div class="muted" style="margin-top:10px">Email</div>
+          <div class="big">info@foxfilmlocationservices.com</div>
+        </div>
+      </div>
+    </section>
 
-</div>
-</div>
+  </main>
 
-</div>
-</section>
+  <footer class="footer">
+    <div class="container">
+      © <span id="y"></span> Fox Film Location Services
+    </div>
+  </footer>
 
-<!-- LOOKBOOK -->
-<section class="section" id="lookbook">
-<div class="container">
-
-<h2 class="section-title">Location Lookbook</h2>
-<p class="section-lead">
-A preview of the cinematic Italy we can unlock for your production.
-</p>
-
-<div class="snap-row">
-
-<a class="tile snap" href="locations.html">
-<img 
-src="assets/img/locations/lookbook1.jpg"
-onerror="this.src='https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=1600';"
->
-<div class="caption">Medieval Hilltop Towns</div>
-</a>
-
-<a class="tile snap" href="locations.html">
-<img 
-src="assets/img/locations/lookbook2.jpg"
-onerror="this.src='https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600';"
->
-<div class="caption">Stone Streets & Period Architecture</div>
-</a>
-
-<a class="tile snap" href="locations.html">
-<img 
-src="assets/img/locations/lookbook3.jpg"
-onerror="this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600';"
->
-<div class="caption">Countryside Estates & Villas</div>
-</a>
-
-</div>
-
-</div>
-</section>
-
-<!-- SERVICES -->
-<section class="section" id="services">
-<div class="container">
-
-<h2 class="section-title">
-Scouting. Fixing. Making It Happen.
-</h2>
-
-<div class="grid grid-3">
-
-<div class="card">
-<div class="pad">
-<h3>Location Scouting</h3>
-<p class="muted">Script-driven scouting across Umbria and Tuscany.</p>
-</div>
-</div>
-
-<div class="card">
-<div class="pad">
-<h3>Permits & Logistics</h3>
-<p class="muted">Municipal coordination, permits and access planning.</p>
-</div>
-</div>
-
-<div class="card">
-<div class="pad">
-<h3>Production Support</h3>
-<p class="muted">Local knowledge, fixing support and on-set readiness.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT CTA -->
-<section class="section">
-<div class="container split">
-
-<div>
-<h2 class="section-title">Plan Your Italian Production</h2>
-<p class="section-lead">Tell us your dates and location needs — we move fast.</p>
-<a class="btn btn-primary" href="contact.html">Contact Us</a>
-</div>
-
-<div class="card">
-<div class="pad stack">
-<div class="pill">📍 Umbria – Tuscany Border</div>
-<div class="pill">✉ info@foxfilmlocationservices.com</div>
-</div>
-</div>
-
-</div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-<div class="container">
-<div>© 2026 Fox Film Location Services</div>
-</div>
-</footer>
-
-<script src="assets/js/main.js"></script>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
