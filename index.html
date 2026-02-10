@@ -6,23 +6,27 @@
   <title>Fox Film Location Services</title>
   <meta name="description" content="We help international film crews shoot in Italy — fast, smoothly, and cinematically. Location scouting, permits, fixing, production support." />
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Cache-bust so updates always show -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
 </head>
 
 <body>
 
-  <!-- ================= Header ================= -->
-  <header class="site-header">
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
 
+      <!-- Logo only (no extra text) -->
       <a class="brand" href="index.html" aria-label="Fox Film Location Services Home">
         <img
           class="brand-logo"
-          src="assets/img/brand/FFLS_LogoClear.png"
+          src="assets/img/brand/FFLS_ColourLogo.png"
           alt="Fox Film Location Services"
+          loading="eager"
         />
       </a>
 
+      <!-- Desktop nav -->
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="index.html" class="is-active">Home</a>
         <a href="locations.html">Locations</a>
@@ -30,26 +34,27 @@
         <a href="contact.html">Contact</a>
       </nav>
 
+      <!-- Mobile menu button -->
       <button class="menu-btn" type="button" aria-label="Open menu" data-menu-btn>
         Menu
       </button>
 
     </div>
 
-    <div class="mobile-menu" data-mobile-menu style="display:none">
+    <!-- Mobile menu -->
+    <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
       <a href="index.html">Home</a>
       <a href="locations.html">Locations</a>
       <a href="#services">Services</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
   </header>
 
-  <!-- ================= Hero ================= -->
+  <!-- ================= HERO ================= -->
   <main>
-
     <section class="hero" aria-label="Hero">
-      <!-- Background image set via CSS for reliability -->
-      <div class="hero-bg" role="img" aria-label="Cinematic Italian landscape"></div>
+      <!-- Inline background path (most reliable) -->
+      <div class="hero-bg" style="background-image:url('assets/img/hero/MoutainViews.png');"></div>
 
       <div class="container hero-content">
         <div class="pill">Access • Speed • Cinematic Locations</div>
@@ -71,7 +76,7 @@
       </div>
     </section>
 
-    <!-- ================= About ================= -->
+    <!-- ================= ABOUT ================= -->
     <section class="section">
       <div class="container grid grid-2">
         <div>
@@ -85,7 +90,7 @@
           </p>
 
           <ul class="checks">
-            <li>Access to cinematic hidden locations</li>
+            <li>Access to cinematic, hidden locations</li>
             <li>Permits & logistics handled locally</li>
             <li>Production support & on-set readiness</li>
           </ul>
@@ -103,7 +108,7 @@
       </div>
     </section>
 
-    <!-- ================= Lookbook Scroll ================= -->
+    <!-- ================= LOOKBOOK ================= -->
     <section class="section" id="lookbook">
       <div class="container">
         <h2 class="section-title">Location Lookbook</h2>
@@ -116,19 +121,19 @@
           </a>
 
           <a class="tile" href="locations.html">
-            <img src="assets/img/locations/lookbook2.jpg" alt="Stone streets & architecture" loading="lazy">
+            <img src="assets/img/locations/lookbook2.jpg" alt="Stone streets and architecture" loading="lazy">
             <div class="caption">Stone streets & architecture</div>
           </a>
 
           <a class="tile" href="locations.html">
-            <img src="assets/img/locations/lookbook3.jpg" alt="Countryside villas & estates" loading="lazy">
+            <img src="assets/img/locations/lookbook3.jpg" alt="Countryside villas and estates" loading="lazy">
             <div class="caption">Countryside villas & estates</div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ================= Services ================= -->
+    <!-- ================= SERVICES ================= -->
     <section class="section" id="services">
       <div class="container">
         <h2 class="section-title">Scouting. Fixing. Making it happen.</h2>
@@ -136,17 +141,17 @@
         <div class="grid grid-3">
           <div class="card">
             <h3>Location scouting</h3>
-            <p>Script-driven scouting across Umbria and Tuscany with camera-ready options.</p>
+            <p class="muted">Script-driven scouting across Umbria and Tuscany with camera-ready options.</p>
           </div>
 
           <div class="card">
             <h3>Permits & logistics</h3>
-            <p>Municipal coordination, permits, closures, access planning and unit base flow.</p>
+            <p class="muted">Municipal coordination, permits, closures, access planning and unit base flow.</p>
           </div>
 
           <div class="card">
             <h3>Production support</h3>
-            <p>Fixing support, local coordination, vendors, and on-set readiness.</p>
+            <p class="muted">Fixing support, local coordination, vendors, and on-set readiness.</p>
           </div>
         </div>
       </div>
@@ -164,7 +169,8 @@
         <div class="card">
           <div class="muted">Based in</div>
           <div class="big">Umbria–Tuscany Border</div>
-          <div class="muted" style="margin-top:10px">Email</div>
+
+          <div class="muted" style="margin-top:12px;">Email</div>
           <div class="big">info@foxfilmlocationservices.com</div>
         </div>
       </div>
@@ -180,7 +186,17 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle (simple)
+    const btn = document.querySelector("[data-menu-btn]");
+    const menu = document.querySelector("[data-mobile-menu]");
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const isOpen = menu.style.display === "block";
+        menu.style.display = isOpen ? "none" : "block";
+      });
+    }
   </script>
-  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
