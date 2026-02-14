@@ -72,18 +72,31 @@ button{ font:inherit; }
   gap: 18px;
 }
 
+/* ✅ Brand now supports TWO images (CastleFox + LogoText) */
 .brand{
   display:flex;
   align-items:center;
+  gap: 10px;              /* <-- controls the space between the two images */
+  line-height: 0;
 }
 
-/* ✅ Force the logo to be big and readable */
+/* ✅ Keep both images aligned + readable */
 .brand-logo{
   height: 150px;
   width: auto;
   max-height: 150px;
   object-fit: contain;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,.55));
+}
+
+/* Optional: if LogoText.png has extra transparent padding, pull it left slightly */
+.brand-logo.text{
+  margin-left: -8px;      /* tweak: -4px / -10px etc */
+}
+
+/* Optional: if castle is too tall compared to text */
+.brand-logo.fox{
+  height: 150px;
 }
 
 /* Nav */
@@ -366,7 +379,12 @@ button{ font:inherit; }
   .nav-links{ display:none; }
   .menu-btn{ display:inline-flex; }
   .header-inner{ height: 90px; }
+
+  /* keep two-logo layout tight on mobile too */
+  .brand{ gap: 8px; }
   .brand-logo{ height: 150px; max-height: 150px; }
+  .brand-logo.text{ margin-left: -6px; }
+
   .hero{ min-height: calc(100vh - 78px); }
   .hero-content{ padding: 70px 0 46px; }
   .grid-2, .grid-3{ grid-template-columns: 1fr; }
