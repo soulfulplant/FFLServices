@@ -394,15 +394,15 @@ button{ font:inherit; }
 
   /* Shrink BOTH images on mobile */
   .brand-logo{
-    height: 64px;
-    max-height: 64px;
+    height: 80px;
+    max-height: 80px;
     width: auto;
   }
 
   /* Make the text logo fit nicely and not push layout */
   .brand-logo.text{
-    height: 40px;
-    max-height: 40px;
+    height: 60px;
+    max-height: 60px;
     margin-left: -6px;     /* tweak if needed */
     flex: 1;
     min-width: 0;
