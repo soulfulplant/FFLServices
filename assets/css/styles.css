@@ -417,8 +417,8 @@ button{ font:inherit; }
 
   /* Text logo */
   .brand-logo.text{
-    height: 85px !important;
-    max-height: 85px !important;
+    height: 150px !important;
+    max-height: 150px !important;
     flex: 0 0 auto !important;    /* stops shrinking to tiny */
     margin-left: -8px !important; /* tweak -4 to -12 */
   }
@@ -448,13 +448,13 @@ button{ font:inherit; }
   }
 
   .brand-logo.fox{
-    height: 76px !important;
-    max-height: 76px !important;
+    height: 80px !important;
+    max-height: 80px !important;
   }
 
   .brand-logo.text{
-    height: 50px !important;
-    max-height: 50px !important;
+    height: 85px !important;
+    max-height: 85px !important;
     margin-left: -6px !important;
   }
 }
