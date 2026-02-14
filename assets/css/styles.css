@@ -455,7 +455,7 @@ button{ font:inherit; }
   .brand-logo.text{
     height: 145px !important;
     max-height: 145px !important;
-    margin-left: -16px !important;
-    top: 12px !important;
+    margin-left: -20px !important;
+    top: 25px !important;
   }
 }
