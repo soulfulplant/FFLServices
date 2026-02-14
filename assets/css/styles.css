@@ -374,61 +374,59 @@ button{ font:inherit; }
   color: rgba(255,255,255,.70);
 }
 /* =========================================================
-   Responsive
+   Responsive (with FORCE rules)
    ========================================================= */
 
-/* Tablet + Mobile */
+/* Mobile / Tablet */
 @media (max-width: 900px){
-
   .nav-links{ display:none; }
   .menu-btn{ display:inline-flex; }
 
-  /* Make header compact */
+  /* Header sizing */
   .header-inner{
-    height: auto;
-    padding: 10px 0;
-    gap: 12px;
+    height: 96px !important;      /* fixed, clean header height */
+    padding: 0 !important;
+    gap: 12px !important;
+    align-items: center !important;
   }
 
-  /* Ensure brand + menu fit on one row */
+  /* Brand (two images) stays on ONE line */
   .brand{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;     /* allows the logo text to shrink instead of pushing menu */
-    flex: 1;          /* lets brand take remaining space */
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important; /* prevents stacking */
+    gap: 12px !important;
+    line-height: 0 !important;
+    flex: 0 0 auto !important;    /* don't let it compress weirdly */
   }
 
-  /* Force images to actually respond on mobile */
-  .brand .brand-logo{
-    height: 56px;
-    max-height: 56px;
-    width: auto;
-    max-width: none;
-    object-fit: contain;
+  /* Base logo behavior */
+  .brand-logo{
+    width: auto !important;
+    object-fit: contain !important;
+    max-width: none !important;
+    display: block !important;
   }
 
-  /* Castle: slightly larger than text for legibility */
-  .brand .brand-logo.fox{
-    height: 62px;
-    max-height: 62px;
-    flex: 0 0 auto;
+  /* Castle */
+  .brand-logo.fox{
+    height: 84px !important;
+    max-height: 84px !important;
+    flex: 0 0 auto !important;
   }
 
-  /* Text logo: shrink + allow overflow control */
-  .brand .brand-logo.text{
-    height: 34px;
-    max-height: 34px;
-    margin-left: -8px;  /* pulls it closer; tweak -4 to -12 */
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 220px;   /* stops it from stealing space from menu */
+  /* Text logo */
+  .brand-logo.text{
+    height: 56px !important;
+    max-height: 56px !important;
+    flex: 0 0 auto !important;    /* stops shrinking to tiny */
+    margin-left: -8px !important; /* tweak -4 to -12 */
   }
 
-  /* If your menu button is getting squished, keep it from shrinking */
+  /* Keep the menu button from shrinking */
   .menu-btn{
-    flex: 0 0 auto;
-    white-space: nowrap;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
   }
 
   /* General layout */
@@ -438,31 +436,25 @@ button{ font:inherit; }
   .cta{ grid-template-columns: 1fr; }
 }
 
-/* Small phones */
+/* Smaller phones */
 @media (max-width: 480px){
-
   .header-inner{
-    padding: 8px 0;
-    gap: 10px;
+    height: 88px !important;
+    gap: 10px !important;
   }
 
   .brand{
-    gap: 8px;
+    gap: 10px !important;
   }
 
-  .brand .brand-logo.fox{
-    height: 54px;
-    max-height: 54px;
+  .brand-logo.fox{
+    height: 76px !important;
+    max-height: 76px !important;
   }
 
-  .brand .brand-logo.text{
-    height: 28px;
-    max-height: 28px;
-    max-width: 170px;
-    margin-left: -6px;
+  .brand-logo.text{
+    height: 50px !important;
+    max-height: 50px !important;
+    margin-left: -6px !important;
   }
-
-  /* If you STILL need more room, uncomment this line to hide text on very small screens */
-  /* .brand .brand-logo.text{ display:none; } */
 }
-
