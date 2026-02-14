@@ -448,13 +448,13 @@ button{ font:inherit; }
   }
 
   .brand-logo.fox{
-    height: 95px !important;
-    max-height: 95px !important;
+    height: 105px !important;
+    max-height: 105px !important;
   }
 
   .brand-logo.text{
-    height: 125px !important;
-    max-height: 125px !important;
-    margin-left: -6px !important;
+    height: 145px !important;
+    max-height: 145px !important;
+    margin-left: -10px !important;
   }
 }
