@@ -417,8 +417,8 @@ button{ font:inherit; }
 
   /* Text logo */
   .brand-logo.text{
-    height: 56px !important;
-    max-height: 56px !important;
+    height: 85px !important;
+    max-height: 85px !important;
     flex: 0 0 auto !important;    /* stops shrinking to tiny */
     margin-left: -8px !important; /* tweak -4 to -12 */
   }
