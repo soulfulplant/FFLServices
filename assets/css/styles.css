@@ -378,15 +378,52 @@ button{ font:inherit; }
 @media (max-width: 900px){
   .nav-links{ display:none; }
   .menu-btn{ display:inline-flex; }
-  .header-inner{ height: 90px; }
 
-  /* keep two-logo layout tight on mobile too */
-  .brand{ gap: 8px; }
-  .brand-logo{ height: 150px; max-height: 150px; }
-  .brand-logo.text{ margin-left: -6px; }
+  /* Make header compact on mobile */
+  .header-inner{
+    height: auto;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  /* Keep logo + text looking balanced */
+  .brand{
+    gap: 8px;
+    min-width: 0;
+  }
+
+  /* Shrink BOTH images on mobile */
+  .brand-logo{
+    height: 56px;
+    max-height: 56px;
+    width: auto;
+  }
+
+  /* Make the text logo fit nicely and not push layout */
+  .brand-logo.text{
+    height: 34px;
+    max-height: 34px;
+    margin-left: -6px;     /* tweak if needed */
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Optional: prevent the text logo from getting too wide */
+  .brand-logo.text{
+    max-width: 220px;
+  }
 
   .hero{ min-height: calc(100vh - 78px); }
   .hero-content{ padding: 70px 0 46px; }
   .grid-2, .grid-3{ grid-template-columns: 1fr; }
   .cta{ grid-template-columns: 1fr; }
 }
+@media (max-width: 480px){
+  .brand-logo{ height: 48px; max-height: 48px; }
+  .brand-logo.text{ height: 30px; max-height: 30px; max-width: 180px; }
+
+  /* Optional: if it’s still tight, drop the text logo completely */
+  /* .brand-logo.text{ display:none; } */
+}
+
+
