@@ -21,7 +21,7 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="About.html">About</a>
+        <a href="AboutUs.html">About</a>
         <a href="locations.html">Locations</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#process">How it works</a>
@@ -33,7 +33,7 @@
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
       <a href="index.html">Home</a>
-      <a href="About.html">About</a>
+      <a href="AboutUs.html">About</a>
       <a href="locations.html">Locations</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#process">How it works</a>
@@ -65,64 +65,17 @@
           </div>
         </div>
 
-        <form class="enquiry-form" action="https://formsubmit.co/info@foxlocationservices.com" method="POST" accept-charset="UTF-8">
-          <input type="hidden" name="_subject" value="New production enquiry — Fox Location Services">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://www.foxlocationservices.com/thank-you.html">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
-
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="name">Name *</label>
-              <input id="name" name="Name" type="text" autocomplete="name" required>
-            </div>
-            <div class="form-field">
-              <label for="company">Company / production</label>
-              <input id="company" name="Company or production" type="text" autocomplete="organization">
-            </div>
-            <div class="form-field">
-              <label for="email">Email *</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="form-field">
-              <label for="phone">Telephone</label>
-              <input id="phone" name="Telephone" type="tel" autocomplete="tel">
-            </div>
-            <div class="form-field">
-              <label for="production-type">Production type</label>
-              <select id="production-type" name="Production type">
-                <option value="">Please select</option>
-                <option>Feature film</option>
-                <option>Television</option>
-                <option>Commercial</option>
-                <option>Documentary</option>
-                <option>Branded content</option>
-                <option>Photography</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="crew-size">Approximate crew size</label>
-              <input id="crew-size" name="Approximate crew size" type="number" min="1" inputmode="numeric">
-            </div>
-            <div class="form-field form-field-wide">
-              <label for="dates">Proposed dates or production window</label>
-              <input id="dates" name="Proposed dates" type="text" placeholder="For example: 12–18 September 2026">
-            </div>
-            <div class="form-field form-field-wide">
-              <label for="message">Brief and requirements *</label>
-              <textarea id="message" name="Brief and requirements" required placeholder="Tell us about the story, visual references, locations, access needs and any practical questions."></textarea>
-            </div>
-            <label class="consent-field">
-              <input type="checkbox" name="Consent to reply" value="Yes" required>
-              <span>I consent to Fox Location Services using these details to respond to my enquiry. *</span>
-            </label>
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Send enquiry </button>
-              <p class="form-note">Submissions are processed by FormSubmit and emailed directly to Fox Location Services.</p>
+        <div class="enquiry-form microsoft-form-shell">
+          <div class="microsoft-form-placeholder" id="microsoft-form-placeholder">
+            <div>
+              <div class="microsoft-form-icon" aria-hidden="true">F</div>
+              <h3>Microsoft enquiry form coming soon.</h3>
+              <p>This space is ready for the Fox Location Services Microsoft Form. Until then, please contact us by email or telephone.</p>
+              <a class="btn btn-primary" href="mailto:info@foxlocationservices.com">Email your enquiry</a>
             </div>
           </div>
-        </form>
+          <iframe class="microsoft-form-frame" id="microsoft-form-frame" src="about:blank" title="Fox Location Services production enquiry form" loading="eager" hidden></iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -131,7 +84,7 @@
     <div class="container footer-inner">
       <div>© <span id="year"></span> Fox Location Services · P. IVA 04046160547</div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="About.html">About</a>
+        <a href="AboutUs.html">About</a>
         <a href="locations.html">Locations</a>
         <a href="index.html#services">Services</a>
         <a href="contact.html">Contact</a>
@@ -140,6 +93,16 @@
   </footer>
 
   <script>
+    // Replace only the text below with the URL from Microsoft Forms: Collect responses → Embed.
+    const microsoftFormsUrl = "MICROSOFT_FORMS_URL_HERE";
+    const microsoftFormFrame = document.getElementById("microsoft-form-frame");
+    const microsoftFormPlaceholder = document.getElementById("microsoft-form-placeholder");
+    if (microsoftFormsUrl.startsWith("https://")) {
+      microsoftFormFrame.src = microsoftFormsUrl;
+      microsoftFormFrame.hidden = false;
+      microsoftFormPlaceholder.hidden = true;
+    }
+
     document.getElementById("year").textContent = new Date().getFullYear();
     const menuButton = document.querySelector("[data-menu-btn]");
     const mobileMenu = document.querySelector("[data-mobile-menu]");
