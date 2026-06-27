@@ -9,7 +9,7 @@
   --orange: #ef6a2e;
   --orange-light: #ff9b5f;
   --green: #283c31;
-  --max-width: 1200px;
+  --max-width: 1120px;
   --radius: 1.25rem;
   --shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.24);
   --sans: "Manrope", "Segoe UI", Arial, sans-serif;
@@ -99,7 +99,7 @@ a {
 }
 
 .section {
-  padding-block: clamp(5rem, 9vw, 8rem);
+  padding-block: clamp(4rem, 7vw, 6.5rem);
 }
 
 .section-light {
@@ -126,7 +126,7 @@ a {
 }
 
 .section-title.small {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.35rem, 4vw, 3.7rem);
 }
 
 .lead {
@@ -144,7 +144,7 @@ a {
 }
 
 .header-inner {
-  min-height: 6.25rem;
+  min-height: 6.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,9 +188,9 @@ a {
 }
 
 .brand-logo.fox {
-  width: 4.5rem;
-  height: 4.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  width: 9.5rem;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 0.65rem;
   background: white;
 }
@@ -301,7 +301,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: max(47rem, 100svh);
+  min-height: clamp(38rem, 72svh, 43rem);
   display: flex;
   align-items: flex-end;
   isolation: isolate;
@@ -329,7 +329,7 @@ a {
 
 .hero-content {
   width: 100%;
-  padding-block: 11rem 4.5rem;
+  padding-block: 9.25rem 3.5rem;
 }
 
 .hero-kicker {
@@ -363,14 +363,14 @@ a {
 }
 
 .hero h1.hero-title-long {
-  max-width: 18ch;
-  font-size: clamp(3.4rem, 6.7vw, 6.6rem);
-  line-height: 0.92;
+  max-width: 19ch;
+  font-size: clamp(3.15rem, 5.2vw, 5.15rem);
+  line-height: 0.95;
 }
 
 .hero-copy {
-  max-width: 42rem;
-  margin: 1.75rem 0 0;
+  max-width: 36rem;
+  margin: 1.35rem 0 0;
   color: rgba(255, 255, 255, 0.78);
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
 }
@@ -475,7 +475,7 @@ a {
 }
 
 .positioning-strip {
-  padding-block: clamp(3.5rem, 7vw, 6rem);
+  padding-block: clamp(3.25rem, 5vw, 4.75rem);
   background: var(--ink-soft);
   text-align: center;
 }
@@ -484,7 +484,7 @@ a {
   max-width: 23ch;
   margin: 0 auto;
   font-family: var(--display);
-  font-size: clamp(2.4rem, 5vw, 4.7rem);
+  font-size: clamp(2.2rem, 4vw, 3.65rem);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 0.98;
@@ -498,7 +498,7 @@ a {
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.75fr);
-  gap: clamp(3rem, 8vw, 8rem);
+  gap: clamp(3rem, 6vw, 5rem);
   align-items: start;
 }
 
@@ -517,7 +517,7 @@ a {
 
 .feature-panel {
   position: relative;
-  padding: 2rem;
+  padding: 1.75rem;
   border-radius: var(--radius);
   background: var(--green);
   color: white;
@@ -540,7 +540,7 @@ a {
   max-width: 12ch;
   margin: 3rem 0 0.75rem;
   font-family: var(--display);
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
@@ -578,7 +578,7 @@ a {
 }
 
 .service-card {
-  min-height: 24rem;
+  min-height: 18rem;
   display: flex;
   flex-direction: column;
   padding: clamp(1.5rem, 3vw, 2.4rem);
@@ -596,7 +596,7 @@ a {
   max-width: 8ch;
   margin: auto 0 1rem;
   font-family: var(--display);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 600;
   line-height: 0.95;
 }
@@ -608,7 +608,7 @@ a {
 
 .location-band {
   position: relative;
-  min-height: 38rem;
+  min-height: 30rem;
   display: flex;
   align-items: flex-end;
   isolation: isolate;
@@ -636,7 +636,7 @@ a {
   max-width: 13ch;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 0.94;
@@ -645,8 +645,8 @@ a {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
 }
 
 .process-step {
@@ -674,7 +674,7 @@ a {
 }
 
 .cta-section {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(4rem, 6vw, 5.5rem);
   background: var(--orange);
   color: #1b0e08;
 }
@@ -690,7 +690,7 @@ a {
   max-width: 13ch;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(3.1rem, 7vw, 6.5rem);
+  font-size: clamp(3rem, 5.3vw, 4.8rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 0.88;
@@ -776,7 +776,7 @@ a {
 
 /* About page */
 .about-hero {
-  padding-block: 11rem clamp(4.5rem, 8vw, 7rem);
+  padding-block: 9rem clamp(4rem, 6vw, 5.25rem);
   background:
     radial-gradient(circle at 82% 30%, rgba(239, 106, 46, 0.18), transparent 30rem),
     linear-gradient(135deg, #0b0d0c 0%, #18221c 100%);
@@ -793,7 +793,7 @@ a {
   max-width: 11ch;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(4rem, 9vw, 8rem);
+  font-size: clamp(3.5rem, 6.5vw, 5.75rem);
   font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 0.88;
@@ -815,10 +815,17 @@ a {
 
 .story-row {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(22rem, 0.78fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  align-items: center;
-  padding-block: clamp(5rem, 10vw, 9rem);
+  gap: clamp(3rem, 7vw, 5.75rem);
+  align-items: start;
+  padding-block: clamp(4.5rem, 7vw, 6.5rem);
+}
+
+.story-row-image-right {
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 0.62fr);
+}
+
+.story-row-image-left {
+  grid-template-columns: minmax(17rem, 0.62fr) minmax(0, 1fr);
 }
 
 .story-row + .story-row {
@@ -837,7 +844,13 @@ a {
 
 .story-image {
   position: relative;
+  width: 100%;
+  max-width: 27rem;
   margin: 0;
+}
+
+.story-row-image-right .story-image {
+  justify-self: end;
 }
 
 .story-image::after {
@@ -882,7 +895,7 @@ a {
   max-width: 13ch;
   margin: 0 0 1.5rem;
   font-family: var(--display);
-  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-size: clamp(2.55rem, 4vw, 3.8rem);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 0.94;
@@ -922,7 +935,7 @@ a {
 }
 
 .belief-band {
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding-block: clamp(4.5rem, 7vw, 6.5rem);
   background: var(--green);
   text-align: center;
 }
@@ -931,7 +944,7 @@ a {
   max-width: 18ch;
   margin: 0 auto;
   font-family: var(--display);
-  font-size: clamp(3rem, 7vw, 6.3rem);
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
   font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 0.93;
@@ -1045,8 +1058,8 @@ a {
   }
 
   .brand-logo.fox {
-    width: 3.7rem;
-    height: 3.7rem;
+    width: 7.75rem;
+    height: auto;
   }
 
   .brand-logo.text {
@@ -1059,11 +1072,11 @@ a {
   }
 
   .hero {
-    min-height: 43rem;
+    min-height: 39rem;
   }
 
   .hero-content {
-    padding-block: 9rem 3rem;
+    padding-block: 8.5rem 3rem;
   }
 
   .hero h1 {
@@ -1071,15 +1084,15 @@ a {
   }
 
   .hero h1.hero-title-long {
-    font-size: clamp(3rem, 13vw, 4.6rem);
+    font-size: clamp(2.85rem, 11.5vw, 3.8rem);
   }
 
   .about-hero {
-    padding-block: 8.5rem 4rem;
+    padding-block: 8rem 3.75rem;
   }
 
   .about-hero h1 {
-    font-size: clamp(3.5rem, 18vw, 5.5rem);
+    font-size: clamp(3.1rem, 14vw, 4.5rem);
   }
 
   .story-image::after {
