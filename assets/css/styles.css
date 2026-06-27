@@ -1152,6 +1152,18 @@ a {
   justify-self: center;
 }
 
+.location-heading-lockup {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.location-heading-mark {
+  width: clamp(6rem, 10vw, 8.5rem);
+  height: auto;
+  flex: 0 0 auto;
+}
+
 .location-reel-groups {
   display: grid;
   gap: clamp(4rem, 8vw, 7rem);
@@ -1203,7 +1215,7 @@ a {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(18rem, 0.7fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(25rem, 0.95fr) minmax(0, 1.05fr);
   gap: clamp(3rem, 8vw, 7rem);
   align-items: start;
 }
@@ -1248,6 +1260,78 @@ a {
 .contact-direct strong {
   font-weight: 800;
   overflow-wrap: anywhere;
+}
+
+.contact-identity-card {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.72fr) minmax(0, 1.28fr);
+  margin-top: 2rem;
+  overflow: hidden;
+  border: 1px solid #ded8cd;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 1rem 3rem rgba(36, 29, 23, 0.1);
+}
+
+.contact-identity-mark {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  border-right: 2px solid var(--orange);
+}
+
+.contact-identity-mark img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-identity-details {
+  min-width: 0;
+  padding: 1.5rem;
+}
+
+.contact-identity-name {
+  margin: 0 0 1.35rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--orange);
+  font-family: var(--display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contact-identity-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-identity-list li {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.contact-identity-list a,
+.contact-identity-list li > span:last-child {
+  overflow-wrap: anywhere;
+  font-family: var(--display);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.contact-identity-icon {
+  color: var(--orange);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 900;
+  text-align: center;
 }
 
 .enquiry-form {
@@ -1478,6 +1562,10 @@ a {
     position: static;
   }
 
+  .contact-identity-card {
+    max-width: 48rem;
+  }
+
   .video-library-vertical {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1598,6 +1686,28 @@ a {
 
   .page-hero {
     padding-block: 11rem 4rem;
+  }
+
+  .location-heading-lockup {
+    align-items: flex-start;
+  }
+
+  .location-heading-mark {
+    width: 5.5rem;
+  }
+
+  .contact-identity-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-identity-mark {
+    padding: 1rem 4rem;
+    border-right: 0;
+    border-bottom: 2px solid var(--orange);
+  }
+
+  .contact-identity-mark img {
+    max-width: 12rem;
   }
 
   .microsoft-form-placeholder {
