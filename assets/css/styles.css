@@ -1153,15 +1153,17 @@ a {
 }
 
 .location-heading-lockup {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: end;
 }
 
 .location-heading-mark {
-  width: clamp(6rem, 10vw, 8.5rem);
+  width: clamp(7rem, 11vw, 9.5rem);
   height: auto;
-  flex: 0 0 auto;
+  justify-self: end;
+  margin-bottom: 0.25rem;
 }
 
 .location-reel-groups {
