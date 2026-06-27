@@ -1296,6 +1296,61 @@ a {
   font-size: 0.72rem;
 }
 
+.microsoft-form-placeholder {
+  min-height: 38rem;
+  display: grid;
+  place-items: center;
+  padding: clamp(2rem, 6vw, 4rem);
+  border: 1px dashed rgba(216, 2, 15, 0.35);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(216, 2, 15, 0.05), rgba(40, 60, 49, 0.06));
+  text-align: center;
+}
+
+.microsoft-form-placeholder > div {
+  max-width: 30rem;
+}
+
+.microsoft-form-icon {
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.5rem;
+  border-radius: 1rem;
+  background: #038387;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 900;
+  box-shadow: 0 0.75rem 2rem rgba(3, 131, 135, 0.2);
+}
+
+.microsoft-form-placeholder h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.microsoft-form-placeholder p {
+  margin: 0 0 1.5rem;
+  color: #5f6661;
+}
+
+.microsoft-form-frame {
+  width: 100%;
+  min-height: 56rem;
+  border: 0;
+  border-radius: 1rem;
+  background: white;
+}
+
+.microsoft-form-frame[hidden],
+.microsoft-form-placeholder[hidden] {
+  display: none;
+}
+
 .thank-you-section {
   min-height: calc(100svh - 8rem);
   display: grid;
@@ -1491,6 +1546,15 @@ a {
 
   .page-hero {
     padding-block: 11rem 4rem;
+  }
+
+  .microsoft-form-placeholder {
+    min-height: 30rem;
+    padding: 2rem 1rem;
+  }
+
+  .microsoft-form-frame {
+    min-height: 64rem;
   }
 
   .about-hero h1 {
