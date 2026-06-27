@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>Contact & Production Enquiries | Fox Location Services</title>
+  <meta name="description" content="Tell Fox Location Services about your Italian film, television, commercial or documentary production.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Fox Location Services — home">
+        <img class="brand-logo fox" src="assets/img/brand/CastleFox.png" alt="Fox Location Services, Umbria, Italy" width="1060" height="684">
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="AboutUs.html">About</a>
+        <a href="locations.html">Locations</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#process">How it works</a>
+        <a class="nav-cta" href="contact.html" aria-current="page">Plan a shoot</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation" data-menu-btn>
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
+      <a href="index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="locations.html">Locations</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">How it works</a>
+      <a href="contact.html" aria-current="page">Plan a shoot</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="contact-page-title">
+      <div class="container page-hero-inner">
+        <div>
+          <p class="eyebrow">Start a conversation</p>
+          <h1 id="contact-page-title">Tell us what your production needs.</h1>
+        </div>
+        <p class="page-hero-copy">Share whatever you already know—creative references, dates, crew size or practical challenges. Early-stage enquiries are welcome.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" aria-labelledby="enquiry-title">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <p class="eyebrow">Production enquiry</p>
+          <h2 id="enquiry-title">From first thought to first take.</h2>
+          <p>The more context you can share, the more useful our first response can be. Required fields are marked with an asterisk.</p>
+          <div class="contact-direct">
+            <div><span>Email</span><a href="mailto:info@foxlocationservices.com">info@foxlocationservices.com</a></div>
+            <div><span>Telephone</span><a href="tel:+393713527335">+39 371 352 7335</a></div>
+            <div><span>Based in</span><strong>Umbria–Tuscany Border</strong></div>
+          </div>
+        </div>
+
+        <form class="enquiry-form" action="https://formsubmit.co/info@foxlocationservices.com" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="New production enquiry — Fox Location Services">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://www.foxlocationservices.com/thank-you.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Name *</label>
+              <input id="name" name="Name" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="company">Company / production</label>
+              <input id="company" name="Company or production" type="text" autocomplete="organization">
+            </div>
+            <div class="form-field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Telephone</label>
+              <input id="phone" name="Telephone" type="tel" autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="production-type">Production type</label>
+              <select id="production-type" name="Production type">
+                <option value="">Please select</option>
+                <option>Feature film</option>
+                <option>Television</option>
+                <option>Commercial</option>
+                <option>Documentary</option>
+                <option>Branded content</option>
+                <option>Photography</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="crew-size">Approximate crew size</label>
+              <input id="crew-size" name="Approximate crew size" type="number" min="1" inputmode="numeric">
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="dates">Proposed dates or production window</label>
+              <input id="dates" name="Proposed dates" type="text" placeholder="For example: 12–18 September 2026">
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="message">Brief and requirements *</label>
+              <textarea id="message" name="Brief and requirements" required placeholder="Tell us about the story, visual references, locations, access needs and any practical questions."></textarea>
+            </div>
+            <label class="consent-field">
+              <input type="checkbox" name="Consent to reply" value="Yes" required>
+              <span>I consent to Fox Location Services using these details to respond to my enquiry. *</span>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send enquiry <span class="arrow" aria-hidden="true">↗</span></button>
+              <p class="form-note">Submissions are processed by FormSubmit and emailed directly to Fox Location Services.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Fox Location Services · P. IVA 04046160547</div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="AboutUs.html">About</a>
+        <a href="locations.html">Locations</a>
+        <a href="index.html#services">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuButton = document.querySelector("[data-menu-btn]");
+    const mobileMenu = document.querySelector("[data-mobile-menu]");
+    if (menuButton && mobileMenu) {
+      const closeMenu = () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation");
+        mobileMenu.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+      };
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+        mobileMenu.classList.toggle("is-open", !isOpen);
+        document.body.classList.toggle("menu-open", !isOpen);
+      });
+      mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+      document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+    }
+  </script>
+</body>
+</html>
